@@ -1,0 +1,43 @@
+{
+  "name": "jmark",
+  "version": "1.0.0",
+  "description": "A wrapper for marked that adds command line functionality and some custom rendering",
+  "bin": {
+    "jmark": "bin/jmark.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./coverage",
+    "install": "npm run fix-git-modules",
+    "fix-git-modules": "cd node_modules/markdown-it-toc-and-anchor && npm install",
+    "lint": "eslint index.js",
+    "test": "npm run lint && istanbul cover mocha --report lcovonly -- -R spec",
+    "test-ci": "npm run test && cat ./coverage/lcov.info | coveralls && npm run clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsepia/jmark.git"
+  },
+  "author": "Julio Sepia <jsepia@juliosepia.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsepia/jmark/issues"
+  },
+  "homepage": "https://github.com/jsepia/jmark#readme",
+  "dependencies": {
+    "highlight.js": "^9.7.0",
+    "markdown-it": "^8.0.0",
+    "markdown-it-toc-and-anchor": "git+https://github.com/jsepia/markdown-it-toc-and-anchor.git",
+    "markdown-it-wikilinks": "^1.0.0",
+    "yargs": "^6.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-string": "^1.2.0",
+    "coveralls": "^2.11.14",
+    "eslint": "^3.7.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.1.1",
+    "rimraf": "^2.5.4"
+  }
+}
