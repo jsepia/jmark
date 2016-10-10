@@ -11,7 +11,7 @@
     "install": "npm run fix-git-modules",
     "fix-git-modules": "cd node_modules/markdown-it-toc-and-anchor && npm install",
     "lint": "eslint index.js",
-    "test": "npm run lint && istanbul cover mocha --report lcovonly -- -R spec",
+    "test": "npm run lint && istanbul cover _mocha --report lcovonly -- -R spec",
     "test-ci": "npm run test && cat ./coverage/lcov.info | coveralls && npm run clean"
   },
   "repository": {
