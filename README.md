@@ -1,5 +1,7 @@
 # JMark
 
+[![Build Status](https://travis-ci.org/jsepia/jmark.svg?branch=master)](https://travis-ci.org/jsepia/jmark) [![Coverage Status](https://coveralls.io/repos/github/jsepia/jmark/badge.svg?branch=master)](https://coveralls.io/github/jsepia/jmark?branch=master)
+
 A wrapper for [markdown-it](https://github.com/markdown-it/markdown-it) that adds command line functionality and some custom rendering.
 
 This utility is meant for personal use; I've hardcoded my preferred settings into the tool with no regards to who else may use it. If you wanted to customize this tool for your own purposes, the cleanest way to do it would be to fork this package.
